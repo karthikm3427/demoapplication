@@ -1,3 +1,5 @@
+// satish how are you?
+
 require "prawn"
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
@@ -18,12 +20,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  # GET /users/1/edit
   def edit
   end
 
-  # POST /users
-  # POST /users.json
   def create
     @user = User.new(user_params)
 
