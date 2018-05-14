@@ -1,0 +1,55 @@
+$("#new_creator").validate({
+  //error place
+  errorPlacement: function (error, element) {
+    error.insertBefore(element);
+  },
+//adding rule
+  rules: {
+  // username is required with max of 20 and min of 6
+  "creator[name]":{
+    required: true,
+    maxlength: 20,
+    minlength: 6
+  },
+  // email is required with format
+  "creator[email]": {
+    required: true,
+    email: true
+  },
+  // password is required
+  "creator[password]": {
+    required: true
+  },
+  // password_confirmation is required and is the same with password
+  "creator[password_confirmation]": {
+    required: true,
+    equalTo: "#user_password"
+  },
+  // introduction is optional with maxlenght 500
+  "creator[password_confirmation]": {
+    maxlength: 500
+  }
+  },
+  // error messages
+  messages: {
+    username:{
+      required: "Username is required.",
+      maxlength: "Username must be less than 20",
+      minlength: "Username must be more than 6"
+    },
+    mail:{
+      required: "Email is required",
+      email: "Please enter a valid email address"
+    },
+    password: {
+      required: "Password is required"
+    },
+    password_confirmation: {
+      required: "Password confirmation is required",
+      equalTo: "Password and password confirmation must be same"
+    }
+  }
+});
+
+
+

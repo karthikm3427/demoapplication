@@ -1,0 +1,295 @@
+
+<!-- <div id="helloo"> Original DIv</div>
+<h1 id ="dynamic_h1"> Add Content Dynamically Using Append</h1>
+<h1 id ="dynamic_h2"> Add Content Dynamically Using Prepend</h1>
+<h1 id ="dynamic_h3"> Append paragraps to body</h1>
+<h1 id ="dynamic_h4"> Prepend paragraps to body</h1>
+
+<button id="btn1">Insert text before Original DIv </button>
+<button id="btn2">Insert text after Original DIv</button>
+<button id="btn3">Insert HTML ELEMENTS after Original DIv </button>
+<button id="btn4">Insert HTML ELEMENTS before Original DIv</button>
+<br>
+<button id="remove_css"> Remove Css Dynamically</button>
+
+<button id="apply_css"> Apply Css Dynamically</button>
+<button id="toggle_css"> Toggle Css Dynamically</button>
+
+<p id ="sample_p0"> paragraph one </p>
+
+<p id = "sample_p1"> paragraph two </p>
+
+<p id ="sample_p2"> paragraph three </p>
+
+<h1>Listing books</h1>
+<div class="row">
+  <div class="col-sm-6">
+<table class="table table-bordered">
+  <thead>
+    <tr class="success">
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Year</th>
+      <th></th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr class="danger">
+        <td><%= book.name %></td>
+        <td><%= book.rating %></td>
+        <td><%= book.year %></td>
+        <td class="btn btn-danger"><%= link_to 'Show', book %></td>
+        <td class="btn btn-success"><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td class="btn btn-info"><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="glyphicon glyphicon-envelope"></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+<br>
+<p>
+  Download:
+  <%= link_to "CSV", books_path(format: "csv") %> |
+</p>
+
+<%= link_to 'New Book', new_book_path %>
+
+Name: <input type="text" name="fullname" value = "value1" id="input1"><br>
+Email: <input type="text" name="email" value = "value2" id="input2">
+
+<div id = "hide">
+   Hide
+   <h1> Helloo world </h1>
+</div>
+
+<div id = "show">
+  Show
+  <h1> Helloo world </h1>
+</div>
+
+<div id="helloo_updated">
+</div>
+ -->
+<div>
+  <ul>
+    <li>  <span> Heeloo</span>  <span>World </span> </li>
+    <li> <b> </b> </li>
+  </ul>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  // $("p").click(function(){
+  //    $("p").hide();
+  // });
+
+  // $("#sample_p").click(function(){
+  //     $("h1").hide();
+  //  });
+
+// $(".sample_p").click(function(){
+//   $("table").hide();
+// });
+
+// $("#sample_p").mouseenter(function(){
+//     alert("You entered p1!");
+// });
+
+// $("#sample_p").mouseleave(function(){
+//     alert("You leave p1!");
+// });
+
+// $("#sample_p").mousedown(function(){
+//     alert("Mouse down over p1!");
+// });
+
+
+// $("#sample_p").mouseup(function(){
+//     alert("Mouse up over p1!");
+// });
+
+// $("input").focus(function(){
+//     $(this).css("background-color", "#cccccc");
+// });
+// $("input").blur(function(){
+//     $(this).css("background-color", "red");
+// });
+
+
+// $("p").on({
+//     mouseenter: function(){
+//         $(this).css("background-color", "lightgray");
+//     }, 
+//     mouseleave: function(){
+//         $(this).css("background-color", "lightblue");
+//     }, 
+//     click: function(){
+//         $(this).css("background-color", "yellow");
+//     } 
+// }); 
+
+
+//  $("#hide").click(function(){
+//     $("p").hide(3000);
+//  });
+
+//  $("#show").click(function(){
+//     $("p").show(3000);
+//  });
+
+//  $("#btn1").click(function(){
+//     alert("Text: " + $("#test").text());
+// });
+// $("#btn2").click(function(){
+//     alert("HTML: " + $("#test").html());
+// });
+
+
+  // $("input").click(function(){
+  //     alert("Text: " + $(this).text());
+  // });
+
+//   $("input").click(function(){
+//     alert($(this).attr("name"));
+//   });
+
+//   $("p").click(function(){
+//     alert($(this).attr("id"));
+//   });
+
+//   $("p").click(function(){
+//     $(this).text(" Helloo world paragraph this value is set dynamically");
+//   });
+
+//  $("div").click(function(){
+//      $(this).text(" Helloo world div this value is set dynamically");
+//   });
+
+//  $("p").click(function(){
+//     $(this).html(" Helloo world paragraph this value is set dynamically this is via .html method");
+//   });
+
+//  $("div").click(function(){
+//      $(this).html(" Helloo world div this value is set dynamically this is via .html method");
+//   });
+ 
+//   $("#hide").text("This value is set on page load");
+//   $("#show").text("This value is set on page load");
+
+//   $("#input1").click(function(){
+//     $(this).attr("value","value3");
+//   });
+
+//   $("#input2").click(function(){
+//     $(this).attr("value","value4");
+// //   });
+
+
+//   $("#input1").click(function(){
+//       $("#input2").attr({
+//           "name" : "https://www.w3schools.com/jquery/",
+//           "value" : "W3Schools jQuery Tutorial"
+//       });
+//   });
+// $("#dynamic_h1").click(function(){
+//   $("p").append("This content is added for all the paragraphs dynamically using append method in Jquery");
+//   $("div").append("This content is added for all the paragraphs dynamically using append method in JQuery");
+// });
+
+// $("#dynamic_h2").click(function(){
+//   $("p").prepend("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+//   $("div").prepend("##########################################");
+// });
+ 
+// function appendText() {
+//     var txt1 = "<p> This paragraph elemnt is created dynamiccaly using append</p>";               // Create element with HTML 
+//     var txt2 = $("<p></p>").text("This paragraph elemnt is created dynamiccaly using append");   // Create with jQuery
+//     var txt3 = document.createElement("p");  // Create with DOM
+//     txt3.innerHTML = "This paragraph elemnt is created dynamiccaly using append";
+//     $("#helloo").append(txt1, txt2, txt3);      // Append the new elements
+// }
+
+// function prependText() {
+//     var txt1 = "<p> This paragraph elemnt is created dynamiccaly using append</p>";               // Create element with HTML 
+//     var txt2 = $("<p></p>").text("This paragraph elemnt is created dynamiccaly using append");   // Create with jQuery
+//     var txt3 = document.createElement("p");  // Create with DOM
+//     txt3.innerHTML = "This paragraph elemnt is created dynamiccaly using append";
+//     $("#helloo").prepend(txt1, txt2, txt3);      // Append the new elements
+// }
+
+// $("#dynamic_h3").click(function(){
+//   appendText();
+// });
+
+// $("#dynamic_h4").click(function(){
+//   prependText();
+// });
+
+ // $("#btn1").click(function(){
+ //    $("#helloo").before("<b>Before</b>");
+ //  });
+ // $("#btn2").click(function(){
+ //    $("#helloo").after("<i>After</i>");
+ //  });
+
+
+// function afterText() {
+//     var txt1 = "<div> This div tag is created dynamically using after </div>";                    // Create element with HTML 
+//     var txt2 = $("<p></p>").text("This p tag is created dynamically using after ");     // Create with jQuery
+//     // var txt3 = document.createElement("<h1> This div tag is created dynamically using after </h1>");    // Create with DOM
+//     // txt3.innerHTML = "This div tag is created dynamically using after ";
+//     $("#helloo").after(txt1, txt2);          // Insert new elements after <img>
+// }
+
+// function beforeText() {
+//     var txt1 = "<div> This div tag is created dynamically using before </div>";                    // Create element with HTML 
+//     var txt2 = $("<p></p>").text("This p tag is created dynamically using before ");     // Create with jQuery
+//     // var txt3 = document.createElement("<h1> This div tag is created dynamically using after </h1>");    // Create with DOM
+//     // txt3.innerHTML = "This div tag is created dynamically using after ";
+//     $("#helloo").before(txt1, txt2);          // Insert new elements after <img>
+// }
+
+// // function beforeText() {
+// //     var txt1 = "<b>I </b>";                    // Create element with HTML 
+// //     var txt2 = $("<i></i>").text("love ");     // Create with jQuery
+// //     var txt3 = document.createElement("b");    // Create with DOM
+// //     txt3.innerHTML = "jQuery!";
+// //     $("img").after(txt1, txt2, txt3);          // Insert new elements after <img>
+// // }
+// $("#btn3").click(function(){
+//    afterText();
+// });
+
+// $("#btn4").click(function(){
+//    beforeText();
+// });
+
+// $("#hide").remove();
+// $("#show").empty();
+
+// $("#apply_css").click(function(){
+//     $("h1, h2, p").addClass("blue");
+//     $("div").addClass("important");
+// });
+
+// $("#remove_css").click(function(){
+//     $("h1, h2, p").removeClass("blue");
+//     $("div").addClass("important");
+// });
+
+// $("#toggle_css").click(function(){
+//     $("h1, h2, p").toggleClass("blue");
+// });
+// $("p").css("background-color", "yellow");
+// $("div").css({"background-color": "red","color":"white"});
+  // $("span").parent().css({"color": "red", "border": "2px solid"});
+
+  $("div").find("span").css("color","green");
+}); 
+</script>
