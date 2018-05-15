@@ -14,6 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root1
+  username2 : root2
   password: lasya
   socket: /var/run/mysqld/mysqld.sock
 
